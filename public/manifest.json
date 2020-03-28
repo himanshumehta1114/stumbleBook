@@ -5,9 +5,8 @@
   "description": "Book to maintain a list of todo's when you have nothing to do.",
   "version": "0.0.1",
   "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
-  "browser_action": {
-    "default_popup": "index.html",
-    "default_title": "Open the popup"
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
   },
   "icons": {
     "16": "logo192.png",
