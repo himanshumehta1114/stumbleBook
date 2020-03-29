@@ -1,5 +1,14 @@
-import React from "react"
+import React from "react";
+import "./App.css";
 
-const App = () => <div>Helooooooo</div>
+import Stumblepane from "./components/stumblepane";
 
-export default App
+const App = () => (
+  <div className="app">
+    {/* <div className="stumblepane__block"> */}
+      <Stumblepane />
+    {/* </div> */}
+  </div>
+);
+
+export default App;
