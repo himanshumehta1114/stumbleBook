@@ -1,0 +1,19 @@
+.Time__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Time {
+    color: #3282B8;
+    font-size: 4rem;
+    line-height: 5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Date {
+    color: #3282B8;
+    font-size: 2rem;
+    line-height: 4rem;
+    font-family: 'Roboto', sans-serif;
+}
