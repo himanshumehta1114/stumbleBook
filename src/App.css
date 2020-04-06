@@ -1,5 +1,8 @@
 .app {
   min-height: 100%;
   background: #0f1417;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

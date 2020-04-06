@@ -10,19 +10,26 @@ const Stumblepane = () => {
   const [values, setValue] = useState(stumbles);
 
   useEffect(() => {
-    chrome.storage.sync.get((res) => {
-      setValue(res.stumbles)
-    })
-  })
+    if (!!chrome && !!chrome.storage) {
+      chrome.storage.sync.get(res => {
+        if (res.stumbles) {
+          setValue(res.stumbles);
+        }
+      });
+    }
+  });
 
   const updateStumble = (val, index) => {
     let newVal = [...values];
 
     newVal[index] = val;
-    setValue(newVal);
-    chrome.storage.sync.set({stumbles: newVal}, () => {
-      setValue(newVal)
-    })
+    if (!!chrome && !!chrome.storage) {
+      chrome.storage.sync.set({ stumbles: newVal }, () => {
+        setValue(newVal);
+      });
+    } else {
+      setValue(newVal);
+    }
   };
 
   return (
